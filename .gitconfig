@@ -1,3 +1,7 @@
+# use separate file for username / github token / GPG key / etc
+[include]
+    path = ~/.gitconfig.local 
+
 [core]
 	editor = gedit
 	excludesfile = ~/.gitignore
@@ -17,7 +21,7 @@
 	undocommit = reset HEAD~
 	hreset = reset --hard
 	co = checkout
-	lg = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --reverse
+	lg = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit
 	df = diff --color --color-words --abbrev
 	cherrypick = cherry-pick
 	cp = cherry-pick
@@ -67,7 +71,21 @@
 	file-style = bold yellow ul
 	file-decoration-style = yellow ol ul
 	hunk-header-decoration-style = blue
-	hunk-header-line-number-style = purple bold
+    hunk-header-line-number-style = purple bold
+    features = decorations
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+
 
 [interactive]
 	diffFilter = delta --color-only --features=interactive
@@ -166,3 +184,7 @@
 # like a LOT faster. https://opensource.googleblog.com/2018/05/introducing-git-protocol-version-2.html
 [protocol]
 	version = 2
+
+[commit]
+    gpgsign = true
+   
