@@ -1,0 +1,24 @@
+[global_config]
+  dbus = False
+[keybindings]
+[profiles]
+  [[default]]
+    cursor_shape = underline
+    font = MesloLGS NF 10
+    foreground_color = "#ffffff"
+    use_system_font = False
+  [[domi]]
+    background_color = "#251920"
+    cursor_shape = underline
+    font = MesloLGS NF 10
+    foreground_color = "#D4D4D4"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
