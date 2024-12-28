@@ -148,4 +148,13 @@ eval "$(pyenv init -)"
 
 alias pdf=evince
 
+# Volume control
+vol() {
+    if [ -n "$1" ]; then
+        amixer sset 'Master' "$1%"
+    else
+        echo "Usage: vol <percentage>"
+        echo "Example: vol 50"
+    fi
+}
 
