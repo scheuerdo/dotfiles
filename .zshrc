@@ -158,3 +158,9 @@ vol() {
     fi
 }
 
+alias cd='cd_and_ls'
+
+cd_and_ls() {
+  builtin cd "$@" && ls
+}
+
