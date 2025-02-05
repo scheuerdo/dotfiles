@@ -21,6 +21,7 @@
 	undocommit = reset HEAD~
 	hreset = reset --hard
 	co = checkout
+	sw = switch
 	lg = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit
 	df = diff --color --color-words --abbrev
 	cherrypick = cherry-pick
