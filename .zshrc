@@ -164,3 +164,14 @@ cd_and_ls() {
   builtin cd "$@" && ls
 }
 
+zsh_color_palette() {
+  for fg in {30..37}; do
+    for bg in {40..47}; do
+      print -n -- "\e[${fg};${bg}m \\\e[${fg};${bg}m  "
+    done
+    print -n "\e[0m\n"
+  done
+}
+
+alias zsh-color-map='zsh_color_palette'
+
