@@ -175,3 +175,5 @@ zsh_color_palette() {
 
 alias zsh-color-map='zsh_color_palette'
 
+
+alias matlab='/usr/local/MATLAB/R2024b/bin/matlab'
